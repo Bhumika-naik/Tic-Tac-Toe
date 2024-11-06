@@ -1,38 +1,94 @@
+/* General Layout for the App */
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f4f4f4;
   min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Header for the Game */
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #2c3e50; /* Dark color for the title */
+  font-weight: bold;
+}
+
+/* Status message */
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Board Layout */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px); /* 3 columns */
+  grid-template-rows: repeat(3, 100px); /* 3 rows */
+  gap: 5px;
+  margin: 20px auto;
+  border: 5px solid #000;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Style for individual squares */
+.square {
+  width: 100px;
+  height: 100px;
+  font-size: 3rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e0e0e0;
+  border: 1px solid #aaa;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.square:focus {
+  outline: none;
+}
+
+.square:hover {
+  background-color: #d3d3d3; /* Slight hover effect */
+}
+
+/* Style for when a square is clicked */
+.square:active {
+  background-color: #bbb; /* Darken the square when clicked */
+}
+
+/* Reset Button */
+.reset-button {
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.reset-button:hover {
+  background-color: #2980b9;
+}
+
+.reset-button:focus {
+  outline: none;
+}
+
+.game-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
