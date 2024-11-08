@@ -28,8 +28,8 @@ h2 {
 /* Board Layout */
 .board {
   display: grid;
-  grid-template-columns: repeat(3, 100px); /* 3 columns */
-  grid-template-rows: repeat(3, 100px); /* 3 rows */
+  grid-template-columns: repeat(4, 100px); /* 3 columns */
+  grid-template-rows: repeat(4, 100px); /* 3 rows */
   gap: 5px;
   margin: 20px auto;
   border: 5px solid #000;
