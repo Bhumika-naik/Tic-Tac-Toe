@@ -23,14 +23,16 @@ function TicTacToe() {
 
   const calculateWinner = (squares) => {
     const lines = [
-      [0, 1, 2,3], [4, 5,6,7], [8,9,10,11],[12,13,14,15],
-      [0, 4, 8,12],[1,5,9,13],[2,6,10,14],[3,7,4,15] ,
-      [0, 5,10,15],[3,6,9,12] ,
+      [0, 1, 2,6,10],[1,2,3,7,11], [2,3,7,11,15],[0,4,8,9,10],
+      [4,5,6,10,14],[5,6,7,11,15],[6,5,4,8,12],[7,6,5,9,13] ,
+      [8,9,10,6,2],[9,10,11,7,3] ,[12,13,14,10,6],[13,14,15,11,7],
+      [5,9,13,14,15],[4,8,9,10,11],[3,7,11,10,9],[14,10,6,2,1],
+      [15,11,7,3,2], [2,1,5,9,13],[2,1,0,4,8,],[3,7,11,10,9],
     ];
 
     for (let i = 0; i < lines.length; i++) {
-      const [a, b, c,d] = lines[i];
-      if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]  &&  squares[a] === squares[d] ) {
+      const [a, b, c,d,e] = lines[i];
+      if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]  &&  squares[a] === squares[d]  && squares[a] === squares[e]) {
         return squares[a]; 
       }
     }
